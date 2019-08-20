@@ -48,6 +48,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.elapsedTimeStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.filesFoundStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.filesTotalStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1.SuspendLayout();
             this.statusStrip2.SuspendLayout();
             this.toolStrip.SuspendLayout();
@@ -207,7 +208,8 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.elapsedTimeStatusLabel,
-            this.filesFoundStatusLabel});
+            this.filesFoundStatusLabel,
+            this.filesTotalStatusLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 402);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -217,16 +219,24 @@
             // 
             // elapsedTimeStatusLabel
             // 
+            this.elapsedTimeStatusLabel.Margin = new System.Windows.Forms.Padding(0, 3, 5, 2);
             this.elapsedTimeStatusLabel.Name = "elapsedTimeStatusLabel";
             this.elapsedTimeStatusLabel.Size = new System.Drawing.Size(49, 17);
             this.elapsedTimeStatusLabel.Text = "00:00:00";
             // 
             // filesFoundStatusLabel
             // 
+            this.filesFoundStatusLabel.Margin = new System.Windows.Forms.Padding(0, 3, 5, 2);
             this.filesFoundStatusLabel.Name = "filesFoundStatusLabel";
             this.filesFoundStatusLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.filesFoundStatusLabel.Size = new System.Drawing.Size(44, 17);
-            this.filesFoundStatusLabel.Text = "Found:";
+            this.filesFoundStatusLabel.Size = new System.Drawing.Size(68, 17);
+            this.filesFoundStatusLabel.Text = "Files found:";
+            // 
+            // filesTotalStatusLabel
+            // 
+            this.filesTotalStatusLabel.Name = "filesTotalStatusLabel";
+            this.filesTotalStatusLabel.Size = new System.Drawing.Size(89, 17);
+            this.filesTotalStatusLabel.Text = "Files processed:";
             // 
             // MainForm
             // 
@@ -279,6 +289,7 @@
         private System.Windows.Forms.ToolStripStatusLabel filesFoundStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel elapsedTimeStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel CurrentFileStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel filesTotalStatusLabel;
     }
 }
 

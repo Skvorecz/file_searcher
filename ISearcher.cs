@@ -8,7 +8,8 @@
         
         string ElapsedTime { get; }
         string CurrentFile { get; }
-        int FilesFound { get; }
+        ulong FilesFound { get; }
+        ulong FilesTotal { get; }
 
         void StartSearch(string path, string searchPattern, string insideText);
         void Pause();

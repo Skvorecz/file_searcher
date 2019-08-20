@@ -23,7 +23,8 @@ namespace FileSearcher
         private SearcherState state = SearcherState.Stopped;
         private bool toPause;
 
-        public int FilesFound { get; private set; }
+        public ulong FilesFound { get; private set; }
+        public ulong FilesTotal { get; private set; }
         public string CurrentFile { get; private set; }
         public string ElapsedTime { get { return (stopwatch.Elapsed.ToString("mm\\:ss\\:ff")); } }        
 
@@ -113,6 +114,8 @@ namespace FileSearcher
                         mre.Reset();
                         mre.WaitOne();                        
                     }
+
+                    FilesTotal++;
                 }
             }
             catch (UnauthorizedAccessException) { }
@@ -145,6 +148,7 @@ namespace FileSearcher
             Stop();
             stopwatch.Reset();
             FilesFound = 0;
+            FilesTotal = 0;
             waiter?.Wait();
         }
     }

@@ -66,6 +66,7 @@ namespace FileSearcher
         {
             elapsedTimeStatusLabel.Text = searcher.ElapsedTime;
             filesFoundStatusLabel.Text = $"Files found: {searcher.FilesFound}";
+            filesTotalStatusLabel.Text = $"Files processed: {searcher.FilesTotal}";
             CurrentFileStatusLabel.Text = searcher.CurrentFile;
         }
 
